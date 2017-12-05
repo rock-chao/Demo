@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="YCQuartzView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oOK-YX-216">
+                                <rect key="frame" x="0.0" y="12" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="1PU-uc-pYO">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="yfx-AJ-1D9">
+                                            <rect key="frame" x="8" y="7" width="359" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Red"/>
+                                                <segment title="Blue"/>
+                                                <segment title="Yellow"/>
+                                                <segment title="Green"/>
+                                                <segment title="Random"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="gCr-RD-1ls"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJf-He-WRS">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="yMg-jm-sJp">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="GSq-FV-hVP">
+                                            <rect key="frame" x="16" y="7" width="343" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Line"/>
+                                                <segment title="Rect"/>
+                                                <segment title="Ellipse"/>
+                                                <segment title="Image"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changeShape:" destination="BYZ-38-t0r" eventType="valueChanged" id="p14-w4-PFL"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oOK-YX-216" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7BS-iW-mbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RJf-He-WRS" secondAttribute="bottom" id="JLP-s0-7j9"/>
+                            <constraint firstItem="RJf-He-WRS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Tyq-G0-6Zd"/>
+                            <constraint firstItem="oOK-YX-216" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UsN-vJ-yIW"/>
+                            <constraint firstItem="RJf-He-WRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dWm-xi-Pxj"/>
+                            <constraint firstItem="oOK-YX-216" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eTy-b8-Fse"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorControl" destination="yfx-AJ-1D9" id="VoI-bN-bLR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+</document>
